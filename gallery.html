@@ -1,0 +1,85 @@
+﻿<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+window.onload = function () {
+html = ($("<div class = 'container'>").append($("<div class = 'row' >").append($("<div class = 'col-xl-14 my-img' id='app' >"))));
+$("body").append(html);
+for (i=1; i<=9; i++){
+mypic = 'images/'+i+'.jpg'
+utl=($('<a>').attr({
+	href:'#',
+	id:'link1',
+	'data-toggle':'modal',
+	'data-target':'#myModal'
+}).append($('<img>').attr({
+    src:mypic,
+	id :i,
+	class:"img-responsive",
+	width:"370px",
+        
+})));
+	
+($('#app').append(utl));
+
+}
+
+$(".row").append($('#myModal'));
+
+$(document).ready(function() {
+    $('img').on('click', function() {
+        $("#showImg").empty();
+        var image = $(this).attr("src");
+        $("#showImg").append("<img id='image1' class='img-responsive' src='" + image + "' />")
+    })
+});
+}
+
+</script>
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title> image gallery </title>
+		<link rel="stylesheet" href="main.css"/>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+       
+	</head>	
+	<body>
+	
+
+       
+        <!-- The Modal -->
+
+ 
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialogmodal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+
+                </button>
+                
+
+            </div>
+            <div class="modal-body" id="showImg" ">
+                
+            </div>
+         
+        </div>
+    </div>
+</div>
+ 
+	</body>
+		
+</html>	

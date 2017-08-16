@@ -1,0 +1,31 @@
+
+
+.my-img a {
+
+    display: inline-block;
+    position:relative;
+    margin:auto;
+    border: 8px solid #CCC;
+    max-width:100%;
+
+
+}
+.my-img a:hover {
+    border: 8px solid #45AFFF;
+}    
+.modal-lg {
+    width: 86%;
+}
+.modal-body {
+    overflow: auto;
+    max-height: auto;
+}
+
+.container {
+   
+       margin:auto;
+}
+
+
+
+
